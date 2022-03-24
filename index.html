@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - KohFrais</title>
+    <link rel="stylesheet" href="style/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/accueil.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/logo/logo_short.svg" height="50" width="50" class="me-3" alt="Logo de KOHFRAIS">
+                    KOH FRAIS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header_liens" aria-controls="header_liens" aria-expanded="false" aria-label="Afficher le menu">
+                    <img src="assets/icones/menu.svg" alt="Icone Hamburger" height="50" width="50">
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="header_liens">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Présentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nos produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nous_contacter.html">Nous contacter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nous_trouver.html">Nous trouver</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <header id="carousel_accueil" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators d-none d-md-flex">
+                <!-- Indicateurs de slide -->
+                <button type="button" data-bs-target="#carousel_accueil" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel_accueil" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel_accueil" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div id="slide1" class="carousel-item active">
+                    <!-- Première slide -->
+                    <div>
+                        <!-- Image de fond -->
+                    </div>
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center">
+                        <!-- Les lignes sont centrées verticalement -->
+                        <div class="row">
+                            <h1 class="col-10 offset-1">L'art des produits glacés</h1>
+                        </div>
+                        <div class="row">
+                            <p class="col-8 offset-3 text-end">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea dictum in congue
+                                amet donec egestas.
+                                Aliquet ipsum eleifend sit eget faucibus sed pharetra nisi, enim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item">
+                    <!-- Deuxième slide, avec d'une part l'image et d'autre part le contenu -->
+                    <div class="row h-100">
+                        <div class="col-6 col-md-7 h-100"></div>
+                        <div class="col-6 col-md-5 h-100 d-flex flex-column justify-content-evenly">
+                            <h1 class="px-4">Deux Gammes</h1>
+                            <p class="px-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta cursus
+                                tortor placerat ut aliquam.
+                                Orci nulla nunc ut sit facilisis.</p>
+                            <a href="#gammes" class="px-4 btn-lg rounded-pill mx-5 w-auto">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item">
+                    <!-- Troisième slide, avec d'une part le contenu et d'autre part l'image -->
+                    <div class="row h-100">
+                        <div class="col-6 col-md-5 h-100 d-flex flex-column justify-content-evenly">
+                            <h1 class="px-4">L'accent mis sur la qualité</h1>
+                            <p class="px-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat, enim
+                                et nisl, in ultricies.
+                            </p>
+                        </div>
+                        <div class="col-6 col-md-7 h-100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boutons de navigation de slide dans les petites tailles d'écran -->
+            <button class="carousel-control-prev d-md-none flex-column justify-content-end" type="button"
+                data-bs-target="#carousel_accueil" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next d-md-none flex-column justify-content-end" type="button"
+                data-bs-target="#carousel_accueil" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+
+        </header>
+
+        <article class="d-flex flex-column flex-lg-row align-items-center mb-5 align-items-lg-start">
+            <!-- Zone de mise en avant -->
+            <div class="d-flex flex-lg-column col-11 col-lg-4 align-items-center mb-4 text-lg-center">
+                <div class="col-3 col-lg-12 text-center">
+                    <img src="assets/icones/map-pin.svg" alt="icone local">
+                    <h2>Local</h2>
+                </div>
+                <p class="mb-4 ps-3 pe-lg-3">Sagittis urna consequat quam nullam. Nibh id viverra ipsum lobortis
+                    adipiscing pretium ac velit.</p>
+                <a href="#" class="d-none d-lg-inline btn-lg rounded-pill px-4 text-start">En savoir plus</a>
+            </div>
+            <div class="d-flex flex-lg-column col-11 col-lg-4 align-items-center mb-4 text-lg-center">
+                <div class="col-3 col-lg-12 text-center">
+                    <img src="assets/icones/feuille.svg" alt="icone bio">
+                    <h2>Bio</h2>
+                </div>
+                <p class="mb-4 ps-3 pe-lg-3">Sagittis urna consequat quam nullam. Nibh id viverra ipsum lobortis
+                    adipiscing pretium ac velit.</p>
+                <a href="#" class="d-none d-lg-inline btn-lg rounded-pill px-4 text-start">Découvrir</a>
+            </div>
+            <div class="d-flex flex-lg-column col-11 col-lg-4 align-items-center mb-4 text-lg-center">
+                <div class="col-3 col-lg-12 text-center">
+                    <img src="assets/icones/checkbox.svg" alt="icone qualité">
+                    <h2>Qualité</h2>
+                </div>
+                <p class="mb-4 ps-3 pe-lg-3">Sagittis urna consequat quam nullam. Nibh id viverra ipsum lobortis
+                    adipiscing pretium ac velit.</p>
+                <a href="#" class="d-none d-lg-inline btn-lg rounded-pill px-4 text-start">Nos valeurs</a>
+            </div>
+        </article>
+
+        <!-- Zone de mise en avant pour les pros et les particuliers -->
+        <article id="gammes" class="mb-5">
+            <div class="h-50 d-flex flew-row">
+                <div class="d-none d-md-block">
+                </div>
+                <div class="my-5">
+                    <div class="col-10 col-md-9 offset-1 offset-md-2 mb-2">
+                        <h2 class="text-center mb-4">Professionnels</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue semper lectus imperdiet
+                            elementum
+                            imperdiet facilisis congue non. Sit vulputate interdum nulla leo egestas.</p>
+                        <p class="text-center text-md-start">
+                            <a href="gamme_pro.html" class="btn-lg rounded-pill px-4">Voir les produits</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-50 d-flex flew-row">
+                <div class="mb-5 mt-md-5">
+                    <div class="col-10 col-md-9 offset-1 text-md-end">
+                        <h2 class="text-center mb-4">Particuliers</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum nunc, neque faucibus
+                            tempus
+                            euismod quis accumsan. Tellus nunc faucibus sed non.</p>
+                        <p class="text-center text-md-end">
+                            <a href="#" class="btn-lg btn-left rounded-pill px-4">Voir les produits</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <!-- Image pour les particuliers -->
+                </div>
+            </div>
+        </article>
+
+        <article class="d-flex flex-column flex-lg-row col-lg-10 offset-lg-1">
+            <div>
+                <h2 class="text-center text-lg-start">Nous trouver</h2>
+                <p class="col-10 offset-1 col-lg-12 offset-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac turpis at amet feugiat erat nunc
+                    faucibus.
+                </p>
+                <a class="btn-lg rounded-pill px-4 offset-7 d-none d-lg-inline-block col-lg-12 offset-lg-0" href="nous_trouver.html">Carte interractive</a>
+            </div>
+            <div>
+                <img id="carte" class="offset-1" src="assets/carte_bretagne_accueil.png" alt="Carte de la Bretagne" />
+                <a class="btn-lg rounded-pill px-4 offset-7 d-lg-none" href="nous_trouver.html">Carte interractive</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="py-4">
+           <div class="text-center container d-flex justify-content-center align-items-center">
+              <p>Notre newsletter</p>
+              <form action="#">
+                 <input type="text" placeholder="Votre e-mail">
+                 <button>
+                    <img src="assets/icones/envoyer.svg" alt="Logo envoyer">
+                 </button>
+              </form>
+           </div>
+        </div>
+
+
+
+        <div class="py-3 mb-3">
+           <div class="text-center container">
+              <ul class="nav justify-content-center">
+                 <li class="nav-item"><img src="assets/icones/facebook.svg" alt=""></li>
+                 <li class="nav-item"><img src="assets/icones/instagram.svg" alt=""></li>
+                 <li class="nav-item"><img src="assets/icones/twitter.svg" alt=""></li>
+              </ul>
+              <ul class="nav justify-content-evenly my-2">
+                 <li class="nav-item"><a href="index.html">Accueil</a></li>
+                 <li class="nav-item"><a href="#">Présentation</a></li>
+                 <li class="nav-item"><a href="#">Nos produits</a></li>
+                 <li class="nav-item"><a href="#">Nous contacter</a></li>
+                 <li class="nav-item"><a href="nous_trouver.html">Nous trouver</a></li>
+              </ul>
+              <p>© Copyright 2022 - <a href="#">Koh Frais</a> | <a href="#">Mention légale</a> | <a href="#">Plan du
+                 site</a>
+              </p>
+           </div>
+        </div>
+     </footer>
+
+    <script src="script/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
