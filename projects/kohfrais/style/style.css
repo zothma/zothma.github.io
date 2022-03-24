@@ -1,0 +1,482 @@
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/OpenSans-Light.woff") format("woff"),
+         url("../fonts/OpenSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("../fonts/OpenSans-Regular.woff") format("woff"),
+         url("../fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Open Sans SemiBold";
+    src: url("../fonts/OpenSans-SemiBold.woff") format("woff"),
+         url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Signika";
+    src: url("../fonts/Signika-Bold.woff") format("woff"),
+         url("../fonts/Signika-Bold.woff") format("woff2");
+}
+
+body {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 1.5rem;
+    /* Laisser la place à la barre de navigation */
+    padding-top: 80px;
+}
+
+strong, em {
+    font-family: "Open Sans SemiBold", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Signika", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: #343637;
+}
+
+/* slider */
+#carousel_accueil, #carousel_accueil > div > div {
+    height: 70vh;
+    min-height: 500px;
+}
+
+#carousel_accueil #slide1 {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+#carousel_accueil #slide1 p {
+    font-family: "Open Sans SemiBold", sans-serif;
+    font-size: 1.8rem;
+}
+
+#carousel_accueil #slide1 > div:first-child {
+    /* Fond de la slide */
+    position: absolute;
+    z-index: -1;
+    background-image: url("../image/bac_glace.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+
+    /* Enlever les bords blancs dus au flou */
+    height: calc(100% + 8px);
+    width: calc(100% + 8px);
+    left: -4px;
+    top: -4px;
+}
+
+#carousel_accueil #slide1 > div:last-child {
+    background-color: #00000020;
+}
+
+#carousel_accueil #slide2 > div > div:first-child {
+    background-image: url("../image/coupe_individuelle.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#carousel_accueil #slide3 > div > div:last-child {
+    background-image: url("../image/personne_farine.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Indicateurs du sliders */
+
+#carousel_accueil .carousel-indicators * {
+    opacity: 0.9 !important;
+}
+
+#carousel_accueil .carousel-indicators :not(.active) {
+    background-color: #DDDDDD;
+}
+#carousel_accueil .carousel-indicators .active {
+    background-color: #808080;
+}
+
+#carousel_accueil .carousel-control-next-icon {
+    background-image: url("../assets/icones/slider-suivant.svg") !important;
+}
+
+#carousel_accueil .carousel-control-prev-icon {
+    background-image: url("../assets/icones/slider-precedent.svg") !important;
+}
+
+#carousel_accueil .carousel-control-next-icon, #carousel_accueil .carousel-control-prev-icon {
+    height: 75px;
+    width: 75px;
+}
+
+/* Zone de mide en avant */
+
+#carousel_accueil + article img {
+    height: 120px;
+    width: 120px;
+}
+
+/* Zone des gammes */
+#gammes {
+    background-color: #FFE6D5;
+}
+
+#gammes > div:first-child > div:first-child {
+    background-image: url("../image/chef_cuisine.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#gammes > div > div {
+    width: 50%;
+}
+
+#gammes > div:last-child > div:last-child {
+    background-image: url("../image/glace_plage.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Boutons à flèches */
+
+.btn-lg {
+    display: inline-block;
+    background-color: #F27999;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans SemiBold";
+    width: 250px;
+    height: 50px;
+    position: relative;
+}
+
+.btn-lg::after {
+    content: url("../assets/icones/fleche-droite.svg");
+    display: inline;
+    position: absolute;
+    right: 20px;
+    transition: right 200ms, left 200ms;
+}
+
+.btn-lg:hover {
+    color: black;
+}
+
+.btn-left::after {
+    /* Version flèche à gauche */
+    content: url("../assets/icones/fleche-gauche.svg") !important;
+    right: unset;
+    left: 20px;
+}
+
+.btn-lg:hover::after {
+    right: 10px;
+}
+
+.btn-left:hover::after {
+    /* Version flèche à gauche */
+    right: unset;
+    left: 10px;
+}
+
+/* Zone nous trouver */
+#gammes + article img {
+    background-color: #FFE6D5;
+    border-radius: 25px;
+    object-fit: contain;
+    object-position: center;
+    height: 400px;
+    width: 400px;
+}
+
+#gammes + article img + a {
+    position: relative;
+    top: -25px;
+}
+
+/* Point de rupture bootstrap md */
+@media screen and (max-width: 991px) {
+    header + article img {
+        height: 90px;
+        width: 90px;
+    }
+
+    #gammes > div > div {
+        width: 100%;
+    }
+
+    #gammes {
+        height: auto;
+    }
+    #gammes + article img {
+        height: unset;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-lg::after, .btn-left::after {
+        /* Suppresion de la flèche dans les petits formats */
+        content: none !important;
+    }
+}
+caption {
+    color: black;
+}
+
+.accordion-button {
+    font-size: 1.5rem;
+}
+
+.accordion-button span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.accordion-button span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.accordion-button.collapsed span img:first-child {
+    display: none;
+}
+
+.accordion-button:not(.collapsed) span img:last-child {
+    display: none;
+}
+
+.btn-success {
+    background-color: #F27999;
+    border-color: #F27999;
+}
+@media screen and (max-width: 991px) {
+    table.w-75 {
+        width: 100%!important;
+    }
+    main h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+
+/* FOOTER*/
+body > footer > div:first-child {
+    background-color: #F27999;
+}
+
+body > footer > div:last-child {
+    background-color: #FEAAE5;
+}
+
+body > footer .nav-item {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+body > footer form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+body > footer input {
+    background-color: #f4f2f2;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    margin-right: -3.25rem;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+body > footer button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-bottom: 20px;
+}
+
+figure a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.titre-icon{
+    display: flex;
+    align-items:baseline;
+    justify-content: flex-start;
+}
+.titre-icon h2{
+    margin-left: 20px;
+}
+
+.liens_internes {
+    padding: 0;
+}
+
+.liens_internes li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 20px;
+}
+.liens_internes a{
+    color: #f27999;
+}
+.liens_internes a:hover{
+    color: #f27999;
+}
+
+/*CARTES*/
+.justify-content-between figure {
+    position: relative;
+    width: 45%;
+    aspect-ratio: 1/1;
+}
+.overlay{ 
+    background-image: linear-gradient(to bottom, transparent, black);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    color: #fff;
+}
+.overlay p{
+    margin-left: 10%;
+}
+.overlay p:first-child{
+    font-family: "Open Sans SemiBold";
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    font-weight: bold;
+}
+.overlay p:last-child{
+    position: absolute;
+    top: 50%;
+}
+.absolute{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.absolute .circle:last-child{
+    margin-left:20px;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: #343637;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_rose{
+    background: #feaae5;
+}
+
+/*FILE DARIANE*/
+.breadcrumb-item a{
+    color:#f27999;
+}
+
+@media screen and (max-width: 991px) {
+    .justify-content-between figure {
+        aspect-ratio: unset;
+        width: 100%;
+        height: 350px;
+    }
+}
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.logo
+{
+    width: 50px;
+    height: 50px;
+}
+
+
+.image-principale img
+{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 60vh;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .25);
+}
+
+
+img.contain {
+    object-fit: contain;
+}
+/* Barre de navigation */
+body > header {
+    /* sticky ne fait pas sortir le bloc du flux et garde sa taille */
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+    background-color: white;
+    z-index: 3;
+}
+
+body > header .navbar-brand {
+    font-size: 36px;
+    color: black;
+    font-family: "Open Sans Regular", sans-serif;
+}
+
+
+body > header .nav-link {
+    display: inline-block;
+    font-size: 20px;
+    color: black;
+    font-family: "Open Sans Regular", sans-serif;
+    height: 100%;
+    line-height: 60px;
+}
+
+@media screen and (max-width: 991px) {
+    body > header .nav-item {
+        height: 80px;
+        border-bottom: 2px solid rgba(0, 0, 0, .25);
+        background-color: white;
+    }
+
+    body > header .nav-link {
+        margin: auto 30px;
+    }
+}
+
+#map {
+    z-index: 2;
+}
